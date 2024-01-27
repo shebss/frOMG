@@ -15,3 +15,5 @@ function createFoodStore(foodArray: Food[]) {
     },
   }
 }
+
+export let foodStore = createFoodStore([])
