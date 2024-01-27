@@ -10,8 +10,11 @@ function createFoodStore(foodArray: Food[]) {
     add: (item: Food) => {
       update((items) => [...items, item])
     },
-    remove: (uid: number) => {
-      update((items) => items.filter((item) => item.uid !== uid))
+    remove: (index: number) => {
+      update((items) => {
+        items.splice(index, 1)
+        return items
+      })
     },
   }
 }
